@@ -1,21 +1,31 @@
 import './input.css'
-import List from '../list/list';
+import { useRef } from 'react';
+
+// props {setGroceryList: setGroceryList}
+
+function Input({groceryList, setGroceryList}){
+    //setGroceryList
+    const myInput = useRef(null);
 
 
-function Input(){
+    const submitItem = () => {
+        // e.g. ['eggs']
+        const updatedGroceryList = [...groceryList, myInput.current.value] //spread operator - extract items from grocery list, then append new grocery item to the list
+        // e.g ['eggs', 'potato']
+        setGroceryList(updatedGroceryList)
+    }
     return (
-        <div class="grocery-form">
-            <div class="mb-3 mt-3 row">
-                <div class="col-10">
-                    <input type="text" id="grocery" placeholder="e.g. eggs" class="form-control input-item" />
+        <div className="grocery-form">
+            <div className="mb-3 mt-3 row">
+                <div className="col-10">
+                    <input ref={myInput} type="text" id="grocery" placeholder="e.g. eggs" className="form-control input-item" />
                 </div>
-                <div class="col-2">
-                    <button type="submit" class="submit-btn btn btn-primary">
+                <div className="col-2">
+                    <button type="submit" className="submit-btn btn btn-primary" onClick={submitItem}>
                         Submit
                     </button>
                 </div>
             </div>
-            <List />
         </div>
     )
 
