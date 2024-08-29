@@ -1,12 +1,11 @@
 import './list.css';
 import ListItem from '../list-item/list-item';
 
-function List({groceryList}) {
-    console.log(groceryList)
+function List({groceryList, setGroceryList}) {
     return (
         <div className="grocery-container form-inline">
             <div className="grocery-list form-group">
-                {groceryList.map(listItem => <ListItem key={listItem} value={listItem}/>)}
+                {groceryList.map((listItem, i) => <ListItem key={i} value={listItem} groceryList={groceryList} setGroceryList={setGroceryList}/>)}
             </div>
             <div className="d-flex justify-content-center"> 
                 <div>
