@@ -1,10 +1,12 @@
 import './list-item.css';
-import { useRef } from 'react';
+import { useState } from 'react';
 
 function ListItem({groceryList, setGroceryList, value}) {
 
-    const toggleUpdate = () => {
+    const [canEdit, setCanEdit] = useState(true);
 
+    const handleToggleEdit = () => {
+        setCanEdit(canEdit => !canEdit); //setting state is asynchronous
     }
 
     const handleDelete = (event) => {
@@ -35,11 +37,11 @@ function ListItem({groceryList, setGroceryList, value}) {
                 <div className="col-8 form-check">
                     <label className="radio-inline">
                         <input className="form-check-input item-list" type="checkbox" value="" id="itemList" />
-                        <input value={value} type="text" onChange={handleChange} disabled/>
+                        <input value={value} type="text" onChange={handleChange} disabled={canEdit}/>
                     </label>
                 </div>
                 <div className="btn-container btn-group col-2">
-                    <button type="button" className="edit-btn btn btn-sm text-success m-1">
+                    <button onClick={handleToggleEdit} type="button" className="edit-btn btn btn-sm text-success m-1">
                         <i className="fas fa-edit"></i>
                     </button>
                     <button onClick={handleDelete} type="button" className="delete-btn btn btn-sm text-danger m-1">
