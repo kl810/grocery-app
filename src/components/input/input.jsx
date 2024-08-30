@@ -12,9 +12,10 @@ function Input({groceryList, setGroceryList}){
         // e.g. ['eggs']
         const updatedGroceryList = [...groceryList, myInput.current.value] //spread operator - extract items from grocery list, then append new grocery item to the list
         // e.g ['eggs', 'potato']
-        setGroceryList(updatedGroceryList)
+        setGroceryList(updatedGroceryList);
+        myInput.current.value="";
     }
-    
+
     return (
         <div className="grocery-form">
             <div className="mb-3 mt-3 row">

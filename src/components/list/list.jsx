@@ -8,7 +8,7 @@ function List({groceryList, setGroceryList}) {
 
         setGroceryList([])
     }
-    
+
     return (
         <div className="grocery-container form-inline">
             <div className="grocery-list form-group">
