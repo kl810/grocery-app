@@ -4,8 +4,8 @@ import List from '../list/list';
 import { useState } from 'react';
 
 function GroceryApp(){
-    const [groceryList, setGroceryList] = useState([]) //initialise empty list
 
+    const [groceryList, setGroceryList] = useState([]) //initialise empty list
 
     return(
         <div className="app">

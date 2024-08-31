@@ -1,4 +1,4 @@
-import './input.css'
+import './input.css';
 import { useRef } from 'react';
 
 // props {setGroceryList: setGroceryList}
@@ -6,12 +6,14 @@ import { useRef } from 'react';
 function Input({groceryList, setGroceryList}){
     //setGroceryList
     const myInput = useRef(null);
-
-
+    
     const submitItem = () => {
         // e.g. ['eggs']
-        const updatedGroceryList = [...groceryList, myInput.current.value] //spread operator - extract items from grocery list, then append new grocery item to the list
+        // [{name: 'Banana', selected: false}]
+        const updatedGroceryList = [...groceryList, {name: myInput.current.value, selected: false}] //spread operator - extract items from grocery list, then append new grocery item to the list
         // e.g ['eggs', 'potato']
+        console.log(updatedGroceryList)
+
         setGroceryList(updatedGroceryList);
         myInput.current.value="";
     }
