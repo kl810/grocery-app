@@ -54,7 +54,7 @@ function ListItem({groceryList, setGroceryList, item}) {
                 <div className="col-8 form-check">
                     <label className="radio-inline">
                         <input 
-                            key={Math.random()}
+                            key={Math.random()} //prevent issue of having to click checkbox twice for checkbox to be checked/unchecked
                             className="form-check-input item-list" 
                             type="checkbox"
                             id="itemList"
@@ -67,6 +67,11 @@ function ListItem({groceryList, setGroceryList, item}) {
                             style={{textDecoration: item.selected ? 'line-through' : 'none'}}
                             onChange={handleChange} 
                             disabled={canEdit}
+                            onKeyDown={(e) => { 
+                                if (e.key === "Enter") { 
+                                    setCanEdit(!canEdit); //set state - save(exit edit fn) edited item when enter key is pressed
+                                } 
+                            }} 
                         />
                     </label>
                 </div>
