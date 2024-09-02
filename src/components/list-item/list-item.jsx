@@ -64,7 +64,7 @@ function ListItem({groceryList, setGroceryList, item}) {
                         <input 
                             value={item.name} 
                             type="text" 
-                            style={{textDecoration: item.selected? 'line-through' : 'none'}}
+                            style={{textDecoration: item.selected ? 'line-through' : 'none'}}
                             onChange={handleChange} 
                             disabled={canEdit}
                         />

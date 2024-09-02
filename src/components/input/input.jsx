@@ -22,10 +22,25 @@ function Input({groceryList, setGroceryList}){
         <div className="grocery-form">
             <div className="mb-3 mt-3 row">
                 <div className="col-10">
-                    <input ref={myInput} type="text" id="grocery" placeholder="e.g. eggs" className="form-control input-item" />
+                    <input 
+                        ref={myInput} 
+                        type="text" 
+                        id="grocery" 
+                        placeholder="e.g. eggs" 
+                        className="form-control input-item"
+                        onKeyDown={(e) => { 
+                            if (e.key === "Enter") { 
+                                submitItem(); 
+                            } 
+                        }}  
+                    />
                 </div>
                 <div className="col-2">
-                    <button type="submit" className="submit-btn btn btn-primary" onClick={submitItem}>
+                    <button 
+                        type="submit" 
+                        className="submit-btn btn btn-primary" 
+                        onClick={submitItem}
+                    >
                         Submit
                     </button>
                 </div>
