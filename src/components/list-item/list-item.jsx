@@ -64,6 +64,7 @@ function ListItem({groceryList, setGroceryList, item}) {
                         <input 
                             value={item.name} 
                             type="text" 
+                            className="edit-input" 
                             style={{textDecoration: item.selected ? 'line-through' : 'none'}}
                             onChange={handleChange} 
                             disabled={canEdit}
@@ -71,7 +72,7 @@ function ListItem({groceryList, setGroceryList, item}) {
                                 if (e.key === "Enter") { 
                                     setCanEdit(!canEdit); //set state - save(exit edit fn) edited item when enter key is pressed
                                 } 
-                            }} 
+                            }}
                         />
                     </label>
                 </div>

@@ -4,3 +4,11 @@
     padding-left: 50px;
 }
 
+.edit-input {
+    background-color: #E8E8E8;
+}
+
+.edit-input:focus {
+    background-color: #E8E8E8;
+}
+

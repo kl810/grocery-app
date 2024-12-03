@@ -35,13 +35,13 @@ function Input({groceryList, setGroceryList}){
                         }}  
                     />
                 </div>
-                <div className="col-2">
+                <div className="col-2 add-btn">
                     <button 
                         type="submit" 
                         className="submit-btn btn btn-primary" 
                         onClick={submitItem}
                     >
-                        Submit
+                        &#43;
                     </button>
                 </div>
             </div>

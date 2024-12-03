@@ -1,0 +1,11 @@
+.add-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.input-item {
+    background-color:#E8E8E8;
+}
+
+.input-item:focus {
+    background-color:#E8E8E8;
+}
