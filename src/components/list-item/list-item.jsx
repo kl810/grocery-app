@@ -50,21 +50,21 @@ function ListItem({groceryList, setGroceryList, item}) {
 
     return (
         <div>
-            <article className="grocery-item row">
+            <article className="grocery-item row d-flex align-items-center">
                 <div className="col-8 form-check">
                     <label className="radio-inline">
                         <input 
                             key={Math.random()} //prevent issue of having to click checkbox twice for checkbox to be checked/unchecked
                             className="form-check-input item-list" 
                             type="checkbox"
-                            id="itemList"
+                            id="item-checkbox"
                             checked={item.selected}
                             onChange={handleSelected}
                         />
                         <input 
                             value={item.name} 
                             type="text" 
-                            className="edit-input" 
+                            id="list-item" 
                             style={{textDecoration: item.selected ? 'line-through' : 'none'}}
                             onChange={handleChange} 
                             disabled={canEdit}
@@ -77,10 +77,10 @@ function ListItem({groceryList, setGroceryList, item}) {
                     </label>
                 </div>
                 <div className="btn-container btn-group col-2">
-                    <button onClick={handleToggleEdit} type="button" className="edit-btn btn btn-sm text-success m-1">
+                    <button onClick={handleToggleEdit} type="button" className="edit-btn btn btn-md text-success m-1">
                         <i className="fas fa-edit"></i>
                     </button>
-                    <button onClick={handleDelete} type="button" className="delete-btn btn btn-sm text-danger m-1">
+                    <button onClick={handleDelete} type="button" className="delete-btn btn btn-md text-danger m-1">
                         <i className="fas fa-trash"></i>
                     </button>
                 </div>

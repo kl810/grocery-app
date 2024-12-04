@@ -4,11 +4,14 @@
     padding-left: 50px;
 }
 
-.edit-input {
+#list-item {
     background-color: #E8E8E8;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
 }
 
-.edit-input:focus {
-    background-color: #E8E8E8;
+#list-item:focus {
+    background-color:	#F8F8F8;
 }
 

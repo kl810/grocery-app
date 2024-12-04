@@ -8,21 +8,12 @@ function GroceryApp() {
 
     const [groceryList, setGroceryList] = useState([]) //initialise empty list
 
-    const darkMode = () => {
-        const element = document.getElementById("app");
-        element.classList.toggle("dark-mode")
-    }
 
     return(
-        <div id="app">
-            <div className='toggle-wrapper'>
-                <button className="dark-mode-toggle" onClick={darkMode}><i class="fa-solid fa-circle-half-stroke"></i></button>
-            </div>
-            <main>
-                <h3>Grocery List</h3>
-                <Input groceryList={groceryList} setGroceryList={setGroceryList}/>
-                <List groceryList={groceryList} setGroceryList={setGroceryList}/>
-            </main>
+        <div className="app">
+            <h3 className="title">Grocery List</h3>
+            <Input groceryList={groceryList} setGroceryList={setGroceryList}/>
+            <List groceryList={groceryList} setGroceryList={setGroceryList}/>
          </div>
     )
 }

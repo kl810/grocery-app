@@ -1,35 +1,13 @@
-#app {
+.app {
     text-align: center;
     border: solid black;
     border-radius: 20px;
     margin: 100px auto;    
     max-width: 500px;
     height: fit-content;
+    padding: 4rem;
 }
 
-.dark-mode {
-    background: #575757;
-    color: white;
-}
-
-main {
-    padding: 30px 50px;
-}
-
-main h3 {
-    padding-bottom: 20px;
-}
-
-.toggle-wrapper {
-    padding-top: 30px;
-    padding-right: 30px;
-    display: flex;
-    justify-content: end;
-    font-size: 1.2em;
-}
-
-.dark-mode-toggle {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+.title {
+    padding-bottom: 2rem;
 }
