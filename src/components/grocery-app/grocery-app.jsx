@@ -11,9 +11,11 @@ function GroceryApp() {
 
     return(
         <div className="app">
-            <h3 className="title">Grocery List</h3>
-            <Input groceryList={groceryList} setGroceryList={setGroceryList}/>
-            <List groceryList={groceryList} setGroceryList={setGroceryList}/>
+            <div className="app-wrapper">
+                <h3 className="title">Grocery List</h3>
+                <Input groceryList={groceryList} setGroceryList={setGroceryList}/>
+                <List groceryList={groceryList} setGroceryList={setGroceryList}/>
+            </div>
          </div>
     )
 }

@@ -50,7 +50,7 @@ function ListItem({groceryList, setGroceryList, item}) {
 
     return (
         <div>
-            <article className="grocery-item row d-flex align-items-center">
+            <article className="grocery-item fluid row d-flex align-items-center">
                 <div className="col-8 form-check">
                     <label className="radio-inline">
                         <input 
@@ -61,7 +61,7 @@ function ListItem({groceryList, setGroceryList, item}) {
                             checked={item.selected}
                             onChange={handleSelected}
                         />
-                        <input 
+                        <input  
                             value={item.name} 
                             type="text" 
                             id="list-item" 

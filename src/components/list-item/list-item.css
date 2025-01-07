@@ -9,6 +9,7 @@
     border-radius: 10px;
     border: none;
     padding: 5px;
+    width: 100%;
 }
 
 #list-item:focus {
